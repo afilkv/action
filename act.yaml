@@ -1,0 +1,11 @@
+name: second try
+on: push
+
+job:
+  job1:
+    runs-on: ubuntu-latest
+  job2:
+    runs-on: macos-latest
+  job3:
+    needs: [job1,job2]
+    runs-on: windows-latest
