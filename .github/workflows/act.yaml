@@ -4,8 +4,11 @@ on: push
 job:
   job1:
     runs-on: ubuntu-latest
+    - run: date
   job2:
     runs-on: macos-latest
+    - run: date
   job3:
     needs: [job1,job2]
     runs-on: windows-latest
+    - run: date
